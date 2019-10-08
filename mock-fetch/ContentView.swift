@@ -8,9 +8,19 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+        VStack() {
+            Text("Hello World")
+                .font(.largeTitle)
+            HStack {
+                Text("Trying out more lines in view")
+                    .font(.subheadline)
+                Text("Adding a new line")
+                    .font(.subheadline)
+            }
+        }
     }
 }
 

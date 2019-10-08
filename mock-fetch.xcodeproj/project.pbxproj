@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		620A33074888E8A6EDF00A83 /* Pods_mock_fetchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C4E3B9E245C6D34B4875D3F /* Pods_mock_fetchTests.framework */; };
 		920FEB97233BD30B00B566F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920FEB96233BD30B00B566F5 /* AppDelegate.swift */; };
 		920FEB99233BD30B00B566F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920FEB98233BD30B00B566F5 /* SceneDelegate.swift */; };
 		920FEB9C233BD30B00B566F5 /* mock_fetch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 920FEB9A233BD30B00B566F5 /* mock_fetch.xcdatamodeld */; };
@@ -14,9 +15,26 @@
 		920FEBA0233BD30D00B566F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920FEB9F233BD30D00B566F5 /* Assets.xcassets */; };
 		920FEBA3233BD30D00B566F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920FEBA2233BD30D00B566F5 /* Preview Assets.xcassets */; };
 		920FEBA6233BD30D00B566F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920FEBA4233BD30D00B566F5 /* LaunchScreen.storyboard */; };
+		920FEBB4233BD33100B566F5 /* mock_fetchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920FEBB3233BD33100B566F5 /* mock_fetchTests.swift */; };
+		920FEBBD233BD46900B566F5 /* TestCompanyMock.json in Sources */ = {isa = PBXBuildFile; fileRef = 920FEBBC233BD46900B566F5 /* TestCompanyMock.json */; };
+		92307CD0233ECACC005F4F50 /* NoaaServiceHelperFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92307CCF233ECACC005F4F50 /* NoaaServiceHelperFunction.swift */; };
+		92466DB32342FA27007D8218 /* ContentViewFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92466DB22342FA27007D8218 /* ContentViewFunc.swift */; };
+		924AFFA1233BED4400C6B68F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924AFFA0233BED4400C6B68F /* SwiftyJSON.framework */; };
+		924AFFA3233C00C400C6B68F /* stubbingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924AFFA2233C00C400C6B68F /* stubbingTests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		920FEBB6233BD33100B566F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 920FEB8B233BD30B00B566F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 920FEB92233BD30B00B566F5;
+			remoteInfo = "mock-fetch";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		6C4E3B9E245C6D34B4875D3F /* Pods_mock_fetchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mock_fetchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		920FEB93233BD30B00B566F5 /* mock-fetch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mock-fetch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		920FEB96233BD30B00B566F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		920FEB98233BD30B00B566F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +44,16 @@
 		920FEBA2233BD30D00B566F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		920FEBA5233BD30D00B566F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		920FEBA7233BD30D00B566F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		920FEBB1233BD33100B566F5 /* mock-fetchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mock-fetchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		920FEBB3233BD33100B566F5 /* mock_fetchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mock_fetchTests.swift; sourceTree = "<group>"; };
+		920FEBB5233BD33100B566F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		920FEBBC233BD46900B566F5 /* TestCompanyMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestCompanyMock.json; sourceTree = "<group>"; };
+		92307CCF233ECACC005F4F50 /* NoaaServiceHelperFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoaaServiceHelperFunction.swift; sourceTree = "<group>"; };
+		92466DB22342FA27007D8218 /* ContentViewFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewFunc.swift; sourceTree = "<group>"; };
+		924AFFA0233BED4400C6B68F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		924AFFA2233C00C400C6B68F /* stubbingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stubbingTests.swift; sourceTree = "<group>"; };
+		98E9685F67C3FD8EAFB6E3B0 /* Pods-mock-fetchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mock-fetchTests.debug.xcconfig"; path = "Target Support Files/Pods-mock-fetchTests/Pods-mock-fetchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF74D559207E4C792871EF15 /* Pods-mock-fetchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mock-fetchTests.release.xcconfig"; path = "Target Support Files/Pods-mock-fetchTests/Pods-mock-fetchTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,14 +64,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		920FEBAE233BD33100B566F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				924AFFA1233BED4400C6B68F /* SwiftyJSON.framework in Frameworks */,
+				620A33074888E8A6EDF00A83 /* Pods_mock_fetchTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3250492E2A428BBE66F0B667 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				924AFFA0233BED4400C6B68F /* SwiftyJSON.framework */,
+				6C4E3B9E245C6D34B4875D3F /* Pods_mock_fetchTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		920FEB8A233BD30B00B566F5 = {
 			isa = PBXGroup;
 			children = (
 				920FEB95233BD30B00B566F5 /* mock-fetch */,
+				920FEBB2233BD33100B566F5 /* mock-fetchTests */,
 				920FEB94233BD30B00B566F5 /* Products */,
+				F5AFED691B4DAABFC417FA72 /* Pods */,
+				3250492E2A428BBE66F0B667 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				920FEB93233BD30B00B566F5 /* mock-fetch.app */,
+				920FEBB1233BD33100B566F5 /* mock-fetchTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +116,7 @@
 				920FEBA7233BD30D00B566F5 /* Info.plist */,
 				920FEB9A233BD30B00B566F5 /* mock_fetch.xcdatamodeld */,
 				920FEBA1233BD30D00B566F5 /* Preview Content */,
+				92466DB22342FA27007D8218 /* ContentViewFunc.swift */,
 			);
 			path = "mock-fetch";
 			sourceTree = "<group>";
@@ -76,6 +127,35 @@
 				920FEBA2233BD30D00B566F5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		920FEBB2233BD33100B566F5 /* mock-fetchTests */ = {
+			isa = PBXGroup;
+			children = (
+				920FEBBB233BD43A00B566F5 /* Support */,
+				920FEBB3233BD33100B566F5 /* mock_fetchTests.swift */,
+				920FEBB5233BD33100B566F5 /* Info.plist */,
+				924AFFA2233C00C400C6B68F /* stubbingTests.swift */,
+			);
+			path = "mock-fetchTests";
+			sourceTree = "<group>";
+		};
+		920FEBBB233BD43A00B566F5 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				920FEBBC233BD46900B566F5 /* TestCompanyMock.json */,
+				92307CCF233ECACC005F4F50 /* NoaaServiceHelperFunction.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		F5AFED691B4DAABFC417FA72 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98E9685F67C3FD8EAFB6E3B0 /* Pods-mock-fetchTests.debug.xcconfig */,
+				AF74D559207E4C792871EF15 /* Pods-mock-fetchTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,6 +178,26 @@
 			productReference = 920FEB93233BD30B00B566F5 /* mock-fetch.app */;
 			productType = "com.apple.product-type.application";
 		};
+		920FEBB0233BD33100B566F5 /* mock-fetchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 920FEBB8233BD33100B566F5 /* Build configuration list for PBXNativeTarget "mock-fetchTests" */;
+			buildPhases = (
+				3951A1D499A1E88A0BE3532E /* [CP] Check Pods Manifest.lock */,
+				920FEBAD233BD33100B566F5 /* Sources */,
+				920FEBAE233BD33100B566F5 /* Frameworks */,
+				920FEBAF233BD33100B566F5 /* Resources */,
+				4E21F2B45F1E9251D993CD07 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				920FEBB7233BD33100B566F5 /* PBXTargetDependency */,
+			);
+			name = "mock-fetchTests";
+			productName = "mock-fetchTests";
+			productReference = 920FEBB1233BD33100B566F5 /* mock-fetchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -110,6 +210,10 @@
 				TargetAttributes = {
 					920FEB92233BD30B00B566F5 = {
 						CreatedOnToolsVersion = 11.0;
+					};
+					920FEBB0233BD33100B566F5 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 920FEB92233BD30B00B566F5;
 					};
 				};
 			};
@@ -127,6 +231,7 @@
 			projectRoot = "";
 			targets = (
 				920FEB92233BD30B00B566F5 /* mock-fetch */,
+				920FEBB0233BD33100B566F5 /* mock-fetchTests */,
 			);
 		};
 /* End PBXProject section */
@@ -142,7 +247,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		920FEBAF233BD33100B566F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3951A1D499A1E88A0BE3532E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mock-fetchTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E21F2B45F1E9251D993CD07 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mock-fetchTests/Pods-mock-fetchTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mock-fetchTests/Pods-mock-fetchTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mock-fetchTests/Pods-mock-fetchTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		920FEB8F233BD30B00B566F5 /* Sources */ = {
@@ -152,11 +306,31 @@
 				920FEB97233BD30B00B566F5 /* AppDelegate.swift in Sources */,
 				920FEB9C233BD30B00B566F5 /* mock_fetch.xcdatamodeld in Sources */,
 				920FEB9E233BD30B00B566F5 /* ContentView.swift in Sources */,
+				92466DB32342FA27007D8218 /* ContentViewFunc.swift in Sources */,
 				920FEB99233BD30B00B566F5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		920FEBAD233BD33100B566F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92307CD0233ECACC005F4F50 /* NoaaServiceHelperFunction.swift in Sources */,
+				920FEBB4233BD33100B566F5 /* mock_fetchTests.swift in Sources */,
+				924AFFA3233C00C400C6B68F /* stubbingTests.swift in Sources */,
+				920FEBBD233BD46900B566F5 /* TestCompanyMock.json in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		920FEBB7233BD33100B566F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 920FEB92233BD30B00B566F5 /* mock-fetch */;
+			targetProxy = 920FEBB6233BD33100B566F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		920FEBA4233BD30D00B566F5 /* LaunchScreen.storyboard */ = {
@@ -324,6 +498,48 @@
 			};
 			name = Release;
 		};
+		920FEBB9233BD33100B566F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98E9685F67C3FD8EAFB6E3B0 /* Pods-mock-fetchTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UFLNVM35T6;
+				INFOPLIST_FILE = "mock-fetchTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "emobile.mock-fetchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mock-fetch.app/mock-fetch";
+			};
+			name = Debug;
+		};
+		920FEBBA233BD33100B566F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF74D559207E4C792871EF15 /* Pods-mock-fetchTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UFLNVM35T6;
+				INFOPLIST_FILE = "mock-fetchTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "emobile.mock-fetchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mock-fetch.app/mock-fetch";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -341,6 +557,15 @@
 			buildConfigurations = (
 				920FEBAB233BD30D00B566F5 /* Debug */,
 				920FEBAC233BD30D00B566F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		920FEBB8233BD33100B566F5 /* Build configuration list for PBXNativeTarget "mock-fetchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				920FEBB9233BD33100B566F5 /* Debug */,
+				920FEBBA233BD33100B566F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
