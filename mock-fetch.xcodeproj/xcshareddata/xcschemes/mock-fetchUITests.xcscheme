@@ -20,6 +20,20 @@
                ReferencedContainer = "container:mock-fetch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "92497FCC234D176000D58558"
+               BuildableName = "mock-fetchUITests.xctest"
+               BlueprintName = "mock-fetchUITests"
+               ReferencedContainer = "container:mock-fetch.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -28,26 +42,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "920FEBB0233BD33100B566F5"
-               BuildableName = "mock-fetchTests.xctest"
-               BlueprintName = "mock-fetchTests"
-               ReferencedContainer = "container:mock-fetch.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "92497FCC234D176000D58558"
-               BuildableName = "mock-fetchUITests.xctest"
-               BlueprintName = "mock-fetchUITests"
-               ReferencedContainer = "container:mock-fetch.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
