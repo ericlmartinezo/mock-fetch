@@ -52,6 +52,16 @@
                ReferencedContainer = "container:mock-fetch.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "92497FCC234D176000D58558"
+               BuildableName = "mock-fetchUITests.xctest"
+               BlueprintName = "mock-fetchUITests"
+               ReferencedContainer = "container:mock-fetch.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -71,6 +81,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "920FEB92233BD30B00B566F5"
+            BuildableName = "mock-fetch.app"
+            BlueprintName = "mock-fetch"
+            ReferencedContainer = "container:mock-fetch.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

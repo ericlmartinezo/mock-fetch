@@ -18,8 +18,7 @@ class mock_fetchTests: XCTestCase {
         
         super.setUp()
         
-
-        if let file = Bundle(for: mock_fetchTests.self).path(forResource: "TestCompanyMock", ofType: "json") {
+        if let file = Bundle(for: mock_fetchTests.self).path(forResource: "CompaniesListJson", ofType: "swift", inDirectory: "mock-fetch/") {
             self.testData = try? Data(contentsOf: URL(fileURLWithPath: file))
         } else {
             XCTFail("Can't find the test JSON file")
@@ -58,3 +57,5 @@ class mock_fetchTests: XCTestCase {
             XCTAssertEqual(tweets_0_username_string!, "Bret")
         }
 }
+
+

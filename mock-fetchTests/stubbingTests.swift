@@ -70,5 +70,27 @@ class stubbingTests: XCTestCase {
             }.resume()
         waitForExpectations(timeout: 10, handler: nil)
     }
+    
+    func testJsonData() {
+        let decoder = JSONDecoder()
+        let companyInfo = try! decoder.decode(PdxTech.self, from: companiesJson)
+        print(companyInfo.username)
+
+    }
+        
+    func testDictionary() {
+        let decoder = JSONDecoder()
+// test array
+        let companyInfo = try! decoder.decode(PdxTech.self, from: companiesJson)
+        print(companyInfo.id)
+        print(companyInfo.username)
+// access nested Dictionary
+        let addressFamily = try! decoder.decode(Address.self, from: companiesJson)
+        let companyProperties = addressFamily.address
+        print(companyProperties.city)
+        print(companyProperties.street,"St.")
+        print(companyProperties.suite)
+        print(companyProperties.zipcode)
+    }
 }
 
