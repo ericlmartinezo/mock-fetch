@@ -24,8 +24,15 @@ let companiesJson = """
                "lat": "-37.3159",
                "lng": "81.1496"
            }
-       }
-    }
+       },
+        "phone": "1-770-736-8031 x56442",
+        "website": "hildegard.org",
+        "company": {
+            "name": "Romaguera-Crona",
+            "catchPhrase": "Multi-layered client-server neural-net",
+            "bs": "harness real-time e-markets"
+        }
+}
 """.data(using: .utf8)!
 
 struct PdxTech: Decodable {
@@ -33,6 +40,8 @@ struct PdxTech: Decodable {
     let name: String
     let username: String
     let email: String
+    let phone: String
+    let website: String
 }
 
 struct Address: Decodable {
@@ -44,4 +53,14 @@ struct AddressDetails: Decodable {
     let suite: String
     let city: String
     let zipcode: String
+}
+
+struct Company: Decodable {
+    let company: CompanyArray
+}
+
+struct CompanyArray: Decodable {
+    let name: String
+    let catchPhrase: String
+    let bs: String
 }

@@ -48,19 +48,23 @@ class stubbingTests: XCTestCase {
                     XCTAssertTrue(result["srsName"] as! String == "WGS 1984")
                     XCTAssertTrue(result["operationalMode"] as! String == "Production")
                     XCTAssertTrue(result["productionCenter"] as! String == "Portland, OR")
+                    XCTAssertTrue(result["moreInformation"] as! String == "http://weather.gov")
                     promise.fulfill()
-
+                    
                     let weather_pdx = result.value(forKeyPath: "location") as Any
-//                    let weather_pdx_region = (weather_pdx as AnyObject).value(forKeyPath: "region")
+//                    let weather_pdx_region_0 = (weather_pdx as AnyObject).value(forKeyPath: "region")
                     let weather_pdx_region = (weather_pdx as AnyObject).value(forKeyPath: PortlandLocationKey.portlandRegion.rawValue)
                     let weather_pdx_wfo = (weather_pdx as AnyObject).value(forKeyPath: PortlandLocationKey.portlandWFO.rawValue)
                     let weather_pdx_zone = (weather_pdx as AnyObject).value(forKeyPath: PortlandLocationKey.portlandZone.rawValue)
                     let weather_pdx_areaDescription = (weather_pdx as AnyObject).value(forKeyPath: PortlandLocationKey.portlandAreaDescription.rawValue)
-    
+                    
+//                    XCTAssertTrue((weather_pdx_region_0 != nil))
                     XCTAssertTrue(weather_pdx_region as! String == PortlandLocationValue.regionValue.rawValue)
                     XCTAssertTrue(weather_pdx_wfo as! String == PortlandLocationValue.wfoValue.rawValue)
                     XCTAssertTrue(weather_pdx_zone as! String == PortlandLocationValue.zoneValue.rawValue)
                     XCTAssertTrue(weather_pdx_areaDescription as! String == PortlandLocationValue.areaDescription.rawValue)
+    
+                    
 //                    print(weather_pdx_areaDescription!)
                 }
             } catch let err {
@@ -68,23 +72,28 @@ class stubbingTests: XCTestCase {
             }
             
             }.resume()
-        waitForExpectations(timeout: 10, handler: nil)
+        waitForExpectations(timeout: 7, handler: nil)
     }
-    
+
     func testJsonData() {
         let decoder = JSONDecoder()
         let companyInfo = try! decoder.decode(PdxTech.self, from: companiesJson)
-        print(companyInfo.username)
-
+        if companyInfo.id != 1 {
+        XCTFail("Company id not equal to expected value")
+        }
     }
         
     func testDictionary() {
         let decoder = JSONDecoder()
 // test array
         let companyInfo = try! decoder.decode(PdxTech.self, from: companiesJson)
+        if companyInfo.username != "Bret" {
+        XCTFail("Username not equal to expected value")
+        } else {
+            print(companyInfo.username)
+        }
         print(companyInfo.id)
-        print(companyInfo.username)
-// access nested Dictionary
+// access and validate nested Dictionary
         let addressFamily = try! decoder.decode(Address.self, from: companiesJson)
         let companyProperties = addressFamily.address
         print(companyProperties.city)
@@ -92,5 +101,11 @@ class stubbingTests: XCTestCase {
         print(companyProperties.suite)
         print(companyProperties.zipcode)
     }
+    
+    func testCompanyArrayProperties(property: String) {
+        let decoder = JSONDecoder()
+        let companyInfo = try! decoder.decode(Company.self, from: companiesJson)
+        let companyArrayValues = companyInfo.company
+        print(companyArrayValues.bs)
+    }
 }
-
