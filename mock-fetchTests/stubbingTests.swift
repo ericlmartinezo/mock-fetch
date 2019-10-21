@@ -8,6 +8,7 @@
 
 import Foundation
 import XCTest
+
 // This test sample makes a GET network request
 class stubbingTests: XCTestCase {
     
@@ -33,7 +34,7 @@ class stubbingTests: XCTestCase {
     
     func testNoaaData() {
         
-        guard let noaaUrlPortland = URL(string: "http://forecast.weather.gov/MapClick.php?lat=45.5361588&lon=-122.8328414&FcstType=json") else { return }
+        guard let noaaUrlPortland = URL(string: NoaaPortlandUrl.urlPortlandUrl.rawValue) else { return }
         
         let promise = expectation(description: "NOAA Weather for Portland OR") // Used fulfill at the end of request
         print(promise)
@@ -49,7 +50,7 @@ class stubbingTests: XCTestCase {
                     XCTAssertTrue(result["operationalMode"] as! String == "Production")
                     XCTAssertTrue(result["productionCenter"] as! String == "Portland, OR")
                     XCTAssertTrue(result["moreInformation"] as! String == "http://weather.gov")
-                    promise.fulfill()
+        promise.fulfill()
                     
                     let weather_pdx = result.value(forKeyPath: "location") as Any
 //                    let weather_pdx_region_0 = (weather_pdx as AnyObject).value(forKeyPath: "region")
@@ -63,8 +64,6 @@ class stubbingTests: XCTestCase {
                     XCTAssertTrue(weather_pdx_wfo as! String == PortlandLocationValue.wfoValue.rawValue)
                     XCTAssertTrue(weather_pdx_zone as! String == PortlandLocationValue.zoneValue.rawValue)
                     XCTAssertTrue(weather_pdx_areaDescription as! String == PortlandLocationValue.areaDescription.rawValue)
-    
-                    
 //                    print(weather_pdx_areaDescription!)
                 }
             } catch let err {
@@ -74,9 +73,11 @@ class stubbingTests: XCTestCase {
             }.resume()
         waitForExpectations(timeout: 7, handler: nil)
     }
+    
+var decoder = JSONDecoder()
 
     func testJsonData() {
-        let decoder = JSONDecoder()
+
         let companyInfo = try! decoder.decode(PdxTech.self, from: companiesJson)
         if companyInfo.id != 1 {
         XCTFail("Company id not equal to expected value")
@@ -84,7 +85,6 @@ class stubbingTests: XCTestCase {
     }
         
     func testDictionary() {
-        let decoder = JSONDecoder()
 // test array
         let companyInfo = try! decoder.decode(PdxTech.self, from: companiesJson)
         if companyInfo.username != "Bret" {
@@ -100,12 +100,5 @@ class stubbingTests: XCTestCase {
         print(companyProperties.street,"St.")
         print(companyProperties.suite)
         print(companyProperties.zipcode)
-    }
-    
-    func testCompanyArrayProperties(property: String) {
-        let decoder = JSONDecoder()
-        let companyInfo = try! decoder.decode(Company.self, from: companiesJson)
-        let companyArrayValues = companyInfo.company
-        print(companyArrayValues.bs)
     }
 }
