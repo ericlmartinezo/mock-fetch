@@ -101,4 +101,11 @@ var decoder = JSONDecoder()
         print(companyProperties.suite)
         print(companyProperties.zipcode)
     }
+    
+    func testCompanyArrayProperties() {
+        let decoder = JSONDecoder()
+        let companyInfo = try! decoder.decode(Company.self, from: companiesJson)
+        let companyArrayValues = companyInfo.company
+        print(companyArrayValues.bs)
+    }
 }
