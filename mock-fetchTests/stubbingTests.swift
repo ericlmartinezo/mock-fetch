@@ -11,7 +11,7 @@ import XCTest
 
 // This test sample makes a GET network request
 class stubbingTests: XCTestCase {
-    
+//    Test for RestFul API using URL OPTION 1. Github
     func testGitUserData() {
         guard let gitUrl = URL(string: "https://api.github.com/users/ericlmartinezo") else { return }
         let promise = expectation(description: "Simple Request")
@@ -31,12 +31,12 @@ class stubbingTests: XCTestCase {
             }.resume()
         waitForExpectations(timeout: 5, handler: nil)
     }
-    
+    //    Test for RestFul API using URL OPTION 2. NOAA
     func testNoaaData() {
         
         guard let noaaUrlPortland = URL(string: NoaaPortlandUrl.urlPortlandUrl.rawValue) else { return }
         
-        let promise = expectation(description: "NOAA Weather for Portland OR") // Used fulfill at the end of request
+        let promise = expectation(description: "Tesing NOAA local Weather API for Portland, OR") // Used fulfill at the end of request
         print(promise)
         
         URLSession.shared.dataTask(with: noaaUrlPortland) { (data, response
@@ -74,18 +74,16 @@ class stubbingTests: XCTestCase {
         waitForExpectations(timeout: 7, handler: nil)
     }
     
+//Local Mock data
 var decoder = JSONDecoder()
-
+//    Option 1
     func testJsonData() {
-
-        let companyInfo = try! decoder.decode(PdxTech.self, from: companiesJson)
-        if companyInfo.id != 1 {
-        XCTFail("Company id not equal to expected value")
-        }
+        makeRequestToNoaa()
     }
         
     func testDictionary() {
-// test array
+//        Option 2
+
         let companyInfo = try! decoder.decode(PdxTech.self, from: companiesJson)
         if companyInfo.username != "Bret" {
         XCTFail("Username not equal to expected value")
@@ -93,7 +91,7 @@ var decoder = JSONDecoder()
             print(companyInfo.username)
         }
         print(companyInfo.id)
-// access and validate nested Dictionary
+// access and validate nested Dictionary inside address
         let addressFamily = try! decoder.decode(Address.self, from: companiesJson)
         let companyProperties = addressFamily.address
         print(companyProperties.city)
@@ -101,7 +99,7 @@ var decoder = JSONDecoder()
         print(companyProperties.suite)
         print(companyProperties.zipcode)
     }
-    
+//    Option 3
     func testCompanyArrayProperties() {
         let decoder = JSONDecoder()
         let companyInfo = try! decoder.decode(Company.self, from: companiesJson)
