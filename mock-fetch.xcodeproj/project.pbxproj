@@ -22,6 +22,7 @@
 		92497FD8234D372700D58558 /* TestCompanyMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 92497FD7234D372700D58558 /* TestCompanyMock.json */; };
 		924AFFA1233BED4400C6B68F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924AFFA0233BED4400C6B68F /* SwiftyJSON.framework */; };
 		924AFFA3233C00C400C6B68F /* stubbingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924AFFA2233C00C400C6B68F /* stubbingTests.swift */; };
+		925D49F8235E7EFF005B6931 /* NetworkRequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D49F7235E7EFF005B6931 /* NetworkRequestHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		92497FD7234D372700D58558 /* TestCompanyMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestCompanyMock.json; sourceTree = SOURCE_ROOT; };
 		924AFFA0233BED4400C6B68F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		924AFFA2233C00C400C6B68F /* stubbingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stubbingTests.swift; sourceTree = "<group>"; };
+		925D49F7235E7EFF005B6931 /* NetworkRequestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestHelper.swift; sourceTree = "<group>"; };
 		98E9685F67C3FD8EAFB6E3B0 /* Pods-mock-fetchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mock-fetchTests.debug.xcconfig"; path = "Target Support Files/Pods-mock-fetchTests/Pods-mock-fetchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF74D559207E4C792871EF15 /* Pods-mock-fetchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mock-fetchTests.release.xcconfig"; path = "Target Support Files/Pods-mock-fetchTests/Pods-mock-fetchTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +139,7 @@
 				920FEB9A233BD30B00B566F5 /* mock_fetch.xcdatamodeld */,
 				920FEBA1233BD30D00B566F5 /* Preview Content */,
 				92466DB22342FA27007D8218 /* ContentViewFunc.swift */,
+				925D49F7235E7EFF005B6931 /* NetworkRequestHelper.swift */,
 			);
 			path = "mock-fetch";
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 			files = (
 				920FEB97233BD30B00B566F5 /* AppDelegate.swift in Sources */,
 				920FEB9C233BD30B00B566F5 /* mock_fetch.xcdatamodeld in Sources */,
+				925D49F8235E7EFF005B6931 /* NetworkRequestHelper.swift in Sources */,
 				920FEB9E233BD30B00B566F5 /* ContentView.swift in Sources */,
 				92466DB32342FA27007D8218 /* ContentViewFunc.swift in Sources */,
 				920FEB99233BD30B00B566F5 /* SceneDelegate.swift in Sources */,

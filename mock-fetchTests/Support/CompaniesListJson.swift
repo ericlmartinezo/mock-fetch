@@ -64,3 +64,19 @@ struct CompanyArray: Decodable {
     let catchPhrase: String
     let bs: String
 }
+
+
+var decoder = JSONDecoder()
+
+func makeRequestToNoaa() {
+    let companyInfo = try! decoder.decode(PdxTech.self, from: companiesJson)
+    if companyInfo.id != 1 {
+    XCTFail("Company id not equal to expected value")
+    } else {
+        print(companyInfo.name)
+        print(companyInfo.username)
+        print(companyInfo.email)
+        print(companyInfo.phone)
+        print(companyInfo.website)
+    }
+}
